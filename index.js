@@ -11,9 +11,9 @@ const app=express();
 app.use(cors());
 
 app.use(express.json());
-app.use(userRouter)
-app.use(OEM_Router)
-app.use(dealerRouter)
+app.use("/user",userRouter)
+app.use("/oem",OEM_Router)
+app.use("/dealer",dealerRouter)
 
 
 app.listen(process.env.port,async()=>{
